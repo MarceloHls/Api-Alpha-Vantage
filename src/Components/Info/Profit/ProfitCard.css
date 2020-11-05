@@ -1,0 +1,80 @@
+.profitCard {
+    margin: 5px;
+    overflow: auto;
+    width: 200px;
+    overflow: hidden;
+    opacity: 0.8;
+    background-color: darkcyan;
+    box-shadow: 0 4px 8px 0 black;
+    cursor: pointer;
+    border-radius: 10px 30px 10px 30px;
+}
+
+.cardHeader {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cardHeader span {
+    font-size: 12px;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    animation: cardBody 0.5s;
+    height: 220px;
+}
+
+.capsule {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bodyNone {
+    height: 0px;
+    animation: bodyNone 0.5s;
+}
+
+
+@media(max-width:550px){
+    .cardHeader {
+        height: 50px;
+
+    }
+    .cardBody {
+        display: flex;
+        flex-direction: column;
+        animation: cardBody 0.5s;
+        height: 220px;
+    }
+    
+ 
+}
+@media(max-width:350px) {
+    .profitCard{
+        opacity: 1.0;
+    }
+}
+
+@keyframes cardBody {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 220px;
+    }
+}
+
+@keyframes bodyNone {
+    0% {
+        height: 220px;
+    }
+    100% {
+        height: 0px;
+    }
+}

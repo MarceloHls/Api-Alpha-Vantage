@@ -1,0 +1,109 @@
+.total {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(5, 5, 5, 0.7);
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.info {
+    height: 550px;
+    width: 600px;
+    cursor: context-menu;
+    background-color: rgb(36, 36, 36);
+    animation: aumentar 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px 0px 0px 1px;
+    box-shadow: 0 4px 8px 0 black;
+    overflow: hidden;
+    
+    
+ 
+}
+
+.totalData {
+    display: flex;
+    flex-direction: column;
+}
+
+.backButton {
+    background-color: rgba(26, 31, 31, 0.096);
+    color: white;
+    margin: 5px;
+    width: 80px;
+    height: 20px;
+    border-radius: 10px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.monthCards {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    background-color: rgba(26, 31, 31, 0.096);
+    border-radius: 20% 20% 0% 00%;
+}
+
+.titleCard {
+    width: 100%;
+}
+
+@media(max-width:550px) {
+    .info {
+        height: 500px;
+        width: 350px;
+        
+        animation: aumentarAd1 0.5s ease-in-out;
+    }
+    @keyframes aumentarAd1 {
+        0% {
+            height: 0%;
+            width: 0%;
+        }
+        100% {
+            height: 500px;
+            width: 350px;
+        }
+    }
+}
+@media(max-width:350px) {
+    .info {
+        height: 420px;
+        width: 290px;
+        animation: aumentarAd2 0.5s ease-in-out;
+        
+        
+    }
+    @keyframes aumentarAd2 {
+        0% {
+            height: 0%;
+            width: 0%;
+        }
+        100% {
+            height: 420px;
+            width: 290px;
+        }
+    }
+}
+
+
+
+@keyframes aumentar {
+    0% {
+        height: 0%;
+        width: 0%;
+    }
+    100% {
+        height: 550px;
+        width: 600px;
+    }
+}
